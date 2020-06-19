@@ -7,8 +7,9 @@ if(element.hasChildNodes()){
 else if(element.nodeType === Text.TEXT_NODE){
     if(element.textContent.match(/coronavirus/gi))
     {
-        element.parentElement.style.color = 'black'
-        element.parentElement.style.backgroundColor = 'black'
+        const replacedText = document.createElement('span')
+        replacedText.innerHTML = element.textContent.replace(/(coronavirus)/gi, '<span style="background-color: black;color: black;">$1</span>')
+        element.replaceWith(replacedText)
     }
     // element.textContent = element.textContent.replace(/coronavirus/gi, 'Stay Home')
 }
