@@ -12,7 +12,7 @@ else if(element.nodeType === Text.TEXT_NODE){
     //     element.replaceWith(replacedText)
     // }
     // element.textContent = element.textContent.replace(/coronavirus/gi, 'Stay Home')
-    element.remove()
+    element.parentElement.remove()
     }
 }
 }
